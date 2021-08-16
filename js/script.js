@@ -1,4 +1,5 @@
-  
+'use strict';
+
   const titleClickHandler = function(event){
     event.preventDefault();
     const clickedElement = this;
@@ -19,9 +20,9 @@
 
   /* [DONE] remove class 'active' from all articles */
 
-  const activeArticles = document.querySelectorAll('.post .active');
+  const activeArticles = document.querySelectorAll('.post.active');
     
-  for(let activeLink of activeArticles){
+  for(let activeArticle of activeArticles){
     activeArticle.classList.remove('active');
   }
 
@@ -39,9 +40,11 @@
 
   targetArticle.classList.add('active');
   }
+
   const links = document.querySelectorAll('.titles a');
 
-for(let link of links){
-  link.addEventListener('click', titleClickHandler);
-}
+  for(let link of links){
+    link.addEventListener('click', titleClickHandler);
+  }
+  
   
