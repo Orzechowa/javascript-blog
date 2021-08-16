@@ -58,7 +58,7 @@
       
     /* find all the articles and save them to variable:  articlesv */
 
-    const articles = document.quertSelectorAll(optArticleSelector)
+    const articles = document.querySelectorAll(optArticleSelector)
     
     let html = '';
     
