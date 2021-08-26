@@ -119,3 +119,26 @@ body {
     margin: 0 10px 0 0;
   }
 }
+.tag-size-5 {
+  font-size: 21px;
+  color: blue;
+}
+.tag-size-3 {
+  font-size: 17px;
+  color:chocolate;
+}
+.tag-size-2 {
+  font-size: 13px;
+  color:rgb(44, 35, 32);
+}
+.tag-size-1 {
+  font-size: 10px;
+  color:plum;
+}
+
+.tags li a {
+  margin-right: 15px;
+  text-decoration-line: none;
+  line-height: 20px;
+  
+}
