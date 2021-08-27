@@ -180,7 +180,7 @@ function generateTags(){
   /* END LOOP: for every article: */
   }
   /* [NEW] find list of tags in right column */
-  const tagList = document.querySelector('.tags');
+  const tagList = document.querySelector(optTagsListSelector);
 
   const tagsParams = calculateTagsParams(allTags);
   console.log('tagsParams:', tagsParams);
@@ -271,7 +271,7 @@ function addClickListenersToTags(){
  
   /* find all links to tags */
 
-  const linksToTags = document.querySelectorAll('a.active[href^="#tag-"]');
+  const linksToTags = document.querySelectorAll('a[href^="#tag-"]');
   
   /* START LOOP: for each link */
   
@@ -314,14 +314,14 @@ function generateAuthors(){
     /* get author from data-authors attribute */
   
     const articleAuthors = article.getAttribute('data-authors');
-
+    
     /* generate HTML of the link */
 
     const authorLinkHTML = '<a href="#author-' + articleAuthors + '"><span> ' + articleAuthors + '</span></a>';
 
     /* add generated code to html variable */
 
-    html = html + authorLinkHTML;
+    html += authorLinkHTML;
 
     /* [NEW] check if this link is NOT already in allAuthors */
     if(!allAuthors[articleAuthors]){
@@ -338,7 +338,7 @@ function generateAuthors(){
     /* END LOOP: for every article: */
   }
   /* [NEW] find list of tags in right column */
-  const authorList = document.querySelector('.authors');
+  const authorList = document.querySelector(optAuthorsListSelector);
 
   /* [NEW] create variable for all links HTML code */
   let allAuthorsHTML = '';
@@ -414,7 +414,7 @@ function addClickListenersToAuthors(){
    
   /* find all links to tags */
   
-  const linksToAuthors = document.querySelectorAll('a.active[href^="#author-"]');
+  const linksToAuthors = document.querySelectorAll('a[href^="#author-"]');
     
   /* START LOOP: for each link */
     
